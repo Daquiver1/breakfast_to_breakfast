@@ -1,13 +1,13 @@
-import React from "react";
-import { LineChart, Line, PieChart, Pie, Cell } from "recharts";
+"use client";
 import {
   Bell,
-  User,
   Home,
-  ShoppingBag,
-  PlusSquare,
   MessageSquare,
+  PlusSquare,
+  ShoppingBag,
+  User,
 } from "lucide-react";
+import { Cell, Line, LineChart, Pie, PieChart } from "recharts";
 
 const lineChartData = [
   { name: "June", value: 80000 },
