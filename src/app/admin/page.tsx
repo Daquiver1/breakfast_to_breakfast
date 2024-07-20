@@ -29,7 +29,11 @@ const Dashboard = () => {
       {/* Sidebar */}
       <div className="w-64 bg-indigo-400 p-6 flex flex-col">
         <div className="mb-8">
-          <img src="" alt="Belinda Peter" className="rounded-full mb-2" />
+          <img
+            src="../images/"
+            alt="Belinda Peter"
+            className="rounded-full mb-2"
+          />
           <h2 className="text-xl font-bold">Belinda Peter</h2>
           <p className="text-white">(Admin)</p>
         </div>
@@ -74,7 +78,7 @@ const Dashboard = () => {
             <div>
               <p className="text-gray-500">Average Monthly Income</p>
               <p className="text-3xl font-bold">$100,000</p>
-              <p className="text-green-500">↑ 47.42 vs previous month</p>
+              <p className="text-black">↑ 47.42 vs previous month</p>
             </div>
             <div className="flex">
               <button className="bg-gray-200 px-4 py-2 rounded-l">
