@@ -10,6 +10,9 @@ import {
 import { Cell, Line, LineChart, Pie, PieChart } from "recharts";
 import { images } from "@/images";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation"; 
+
 
 const lineChartData = [
   { name: "June", value: 80000 },
@@ -23,9 +26,32 @@ const pieChartData = [
   { name: "Swiss Burger", value: 20 },
 ];
 
+
+interface SidebarButtonProps {
+  href: string;
+  children: React.ReactNode;
+  isActive: boolean;
+}
+
+const SidebarButton: React.FC<SidebarButtonProps> = ({
+  href,
+  children,
+  isActive,
+}) => (
+  <Link
+    href={href}
+    className={`flex items-center p-2 rounded-md ${
+      isActive ? "bg-gray-100" : ""
+    }`}
+  >
+    {children}
+  </Link>
+);
+
 const COLORS = ["#FF0000", "#00C49F", "#0000FF"];
 
 const Dashboard = () => {
+    const activePathname = usePathname();
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
@@ -40,18 +66,43 @@ const Dashboard = () => {
           <p className="text-white">(Admin)</p>
         </div>
         <nav>
+          <div className="space-y-4"></div>
           <ul className="space-y-4">
             <li className="flex items-center ">
-              <Home className="mr-2 text-red-600" /> Dashboard
+              <Home className="mr-2 text-red-600" />
+              <SidebarButton
+                href="/dashboard"
+                isActive={activePathname === "/dashboard"}
+              >
+                Dashboard
+              </SidebarButton>
             </li>
             <li className="flex items-center">
-              <ShoppingBag className="mr-2  text-yellow-500" /> Orders
+              <ShoppingBag className="mr-2  text-yellow-500" />
+              <SidebarButton
+                href="/orders"
+                isActive={activePathname === "/orders"}
+              >
+                Orders
+              </SidebarButton>
             </li>
             <li className="flex items-center">
-              <PlusSquare className="mr-2 text-blue-600" /> Add to menu
+              <PlusSquare className="mr-2 text-blue-600" />{" "}
+              <SidebarButton
+                href="/add-to-menu"
+                isActive={activePathname === "/add-to-menu"}
+              >
+                Add to Menu
+              </SidebarButton>
             </li>
             <li className="flex items-center">
-              <MessageSquare className="mr-2 text-green-500" /> Reviews
+              <MessageSquare className="mr-2 text-green-500" />{" "}
+              <SidebarButton
+                href="/reviews"
+                isActive={activePathname === "/reviews"}
+              >
+                Reviews
+              </SidebarButton>
             </li>
           </ul>
         </nav>
