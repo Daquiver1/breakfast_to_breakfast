@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { Cell, Line, LineChart, Pie, PieChart } from "recharts";
 import { images } from "@/images";
+import Image from "next/image";
 
 const lineChartData = [
   { name: "June", value: 80000 },
@@ -30,7 +31,7 @@ const Dashboard = () => {
       {/* Sidebar */}
       <div className="w-64 bg-indigo-400 p-6 flex flex-col">
         <div className="mb-8">
-          <img
+          <Image
             src={images.image1}
             alt="Belinda Peter"
             className="rounded-full mb-2"
