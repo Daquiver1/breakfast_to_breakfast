@@ -27,7 +27,7 @@ const Dashboard = () => {
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
-      <div className="w-64 bg-white p-6 flex flex-col">
+      <div className="w-64 bg-black p-6 flex flex-col">
         <div className="mb-8">
           <img
             src="/api/placeholder/100/100"
@@ -35,7 +35,7 @@ const Dashboard = () => {
             className="rounded-full mb-2"
           />
           <h2 className="text-xl font-bold">Belinda Peter</h2>
-          <p className="text-gray-500">(Admin)</p>
+          <p className="text-white">(Admin)</p>
         </div>
         <nav>
           <ul className="space-y-4">
@@ -58,16 +58,16 @@ const Dashboard = () => {
       {/* Main content */}
       <div className="flex-1 p-8">
         <header className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold">Overview</h1>
-          <p>Hello Belinda, Welcome back!</p>
+          <h1 className="text-3xl font-bold text-black">Overview</h1>
+          <p className="text-black">Hello Belinda, Welcome back!</p>
           <div className="flex items-center">
             <input
               type="text"
               placeholder="Start searching here"
               className="mr-4 p-2 border rounded"
             />
-            <Bell className="mr-4" />
-            <User />
+            <Bell className="mr-4 text-red-600" />
+            <User className="text-blue-600" />
           </div>
         </header>
 
