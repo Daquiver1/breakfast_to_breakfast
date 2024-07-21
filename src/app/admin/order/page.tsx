@@ -90,11 +90,7 @@ const OrdersPage = () => {
       {/* Sidebar */}
       <div className="w-64 bg-white p-6 flex flex-col">
         <div className="mb-8">
-          <img
-            src="/api/placeholder/100/100"
-            alt="Belinda Peter"
-            className="rounded-full mb-2"
-          />
+          <img src="" alt="Belinda Peter" className="rounded-full mb-2" />
           <h2 className="text-xl font-bold text-black">Belinda Peter</h2>
           <p className="text-gray-500">(Admin)</p>
         </div>
@@ -213,25 +209,25 @@ const OrdersPage = () => {
           <table className="min-w-full">
             <thead>
               <tr className="bg-gray-100">
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
                   Order
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
                   Customer
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
                   Date
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
                   Total
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
                   Payment Status
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
                   Order ID
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
                   Delivery Address
                 </th>
               </tr>
