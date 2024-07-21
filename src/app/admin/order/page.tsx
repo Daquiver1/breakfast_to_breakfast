@@ -95,22 +95,22 @@ const OrdersPage = () => {
             alt="Belinda Peter"
             className="rounded-full mb-2"
           />
-          <h2 className="text-xl font-bold">Belinda Peter</h2>
+          <h2 className="text-xl font-bold text-black">Belinda Peter</h2>
           <p className="text-gray-500">(Admin)</p>
         </div>
         <nav>
           <ul className="space-y-4">
-            <li className="flex items-center">
-              <Home className="mr-2" /> Dashboard
+            <li className="flex items-center text-black">
+              <Home className="mr-2 text-red-600" /> Dashboard
             </li>
-            <li className="flex items-center text-blue-600">
-              <ShoppingBag className="mr-2" /> Orders
+            <li className="flex items-center text-black">
+              <ShoppingBag className="mr-2 text-yellow-500" /> Orders
             </li>
-            <li className="flex items-center">
-              <PlusSquare className="mr-2" /> Add to menu
+            <li className="flex items-center text-black">
+              <PlusSquare className="mr-2 text-blue-600" /> Add to menu
             </li>
-            <li className="flex items-center">
-              <MessageSquare className="mr-2" /> Reviews
+            <li className="flex items-center text-black">
+              <MessageSquare className="mr-2 text-green-600" /> Reviews
             </li>
           </ul>
         </nav>
@@ -119,7 +119,7 @@ const OrdersPage = () => {
       {/* Main content */}
       <div className="flex-1 p-8">
         <header className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold">Orders</h1>
+          <h1 className="text-3xl font-bold text-black">Orders</h1>
           <div className="flex items-center space-x-4">
             <button className="bg-purple-100 text-purple-700 px-4 py-2 rounded-lg flex items-center">
               Accept Order <ChevronDown className="ml-2" />
@@ -137,26 +137,26 @@ const OrdersPage = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center">
               <span className="mr-2">📅</span>
-              <span className="font-bold">Today</span>
+              <span className="font-bold text-black">Today</span>
             </div>
             <div className="flex space-x-8">
               <div>
                 <p className="text-gray-500 text-sm">Total Orders</p>
-                <p className="font-bold">30010</p>
+                <p className="font-bold text-black">30010</p>
               </div>
               <div>
                 <p className="text-gray-500 text-sm">Ordered meals over time</p>
-                <p className="font-bold">1500</p>
+                <p className="font-bold text-black">1500</p>
               </div>
               <div>
                 <p className="text-gray-500 text-sm">
                   Ordered orders over time
                 </p>
-                <p className="font-bold">30007</p>
+                <p className="font-bold text-black">30007</p>
               </div>
               <div>
                 <p className="text-gray-500 text-sm">Refunds</p>
-                <p className="font-bold">2</p>
+                <p className="font-bold text-black">2</p>
               </div>
             </div>
           </div>
