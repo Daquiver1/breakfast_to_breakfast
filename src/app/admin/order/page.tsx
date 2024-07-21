@@ -88,7 +88,7 @@ const OrdersPage = () => {
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
-      <div className="w-64 bg-white p-6 flex flex-col">
+      <div className="w-64 bg-indigo-400 p-6 flex flex-col">
         <div className="mb-8">
           <img src="" alt="Belinda Peter" className="rounded-full mb-2" />
           <h2 className="text-xl font-bold text-black">Belinda Peter</h2>
