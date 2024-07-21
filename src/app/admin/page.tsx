@@ -11,8 +11,7 @@ import { Cell, Line, LineChart, Pie, PieChart } from "recharts";
 import { images } from "@/images";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; 
-
+import { usePathname } from "next/navigation";
 
 const lineChartData = [
   { name: "June", value: 80000 },
@@ -25,7 +24,6 @@ const pieChartData = [
   { name: "Cappuccino", value: 30 },
   { name: "Swiss Burger", value: 20 },
 ];
-
 
 interface SidebarButtonProps {
   href: string;
@@ -51,7 +49,7 @@ const SidebarButton: React.FC<SidebarButtonProps> = ({
 const COLORS = ["#FF0000", "#00C49F", "#0000FF"];
 
 const Dashboard = () => {
-    const activePathname = usePathname();
+  const activePathname = usePathname();
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
@@ -202,13 +200,13 @@ const Dashboard = () => {
             <div className="space-y-4">
               <div>
                 <p className="text-gray-500">Online</p>
-                <p className="text-xl font-bold">
+                <p className="text-xl font-bold text-black">
                   10,362 <span className="text-green-500 text-sm">2.5% ↑</span>
                 </p>
               </div>
               <div>
                 <p className="text-gray-500">Offline</p>
-                <p className="text-xl font-bold">
+                <p className="text-xl font-bold text-black">
                   10,362 <span className="text-green-500 text-sm">2.5% ↑</span>
                 </p>
               </div>
