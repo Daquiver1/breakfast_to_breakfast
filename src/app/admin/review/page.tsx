@@ -10,6 +10,8 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
+import { images } from "@/images";
+import Image from "next/image";
 
 const reviewsData = [
   {
@@ -96,30 +98,31 @@ const reviewsData = [
 
 const ReviewsPage = () => {
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen bg-white">
       {/* Sidebar */}
       <div className="w-64 bg-white p-6 flex flex-col">
         <div className="mb-8">
-          <img
-            src="/api/placeholder/100/100"
+          <Image
+            src={images.image1}
+            style={{ width: "100px", height: "100px" }}
             alt="Belinda Peter"
             className="rounded-full mb-2"
           />
-          <h2 className="text-xl font-bold">Belinda Peter</h2>
+          <h2 className="text-xl font-bold text-black">Belinda Peter</h2>
         </div>
         <nav className="flex-grow">
           <ul className="space-y-4">
-            <li className="flex items-center">
-              <Grid className="mr-2" /> Overview
+            <li className="flex items-center text-black">
+              <Grid className="mr-2 text-red-600" /> Overview
             </li>
-            <li className="flex items-center">
-              <FileText className="mr-2" /> Orders
+            <li className="flex items-center text-black">
+              <FileText className="mr-2 text-yellow-400" /> Orders
             </li>
-            <li className="flex items-center">
-              <PlusSquare className="mr-2" /> Add to Menu
+            <li className="flex items-center text-black">
+              <PlusSquare className="mr-2 text-blue-500" /> Add to Menu
             </li>
-            <li className="flex items-center text-green-500">
-              <MessageSquare className="mr-2" /> Reviews
+            <li className="flex items-center text-black">
+              <MessageSquare className="mr-2 text-green-600" /> Reviews
             </li>
           </ul>
         </nav>
@@ -134,7 +137,7 @@ const ReviewsPage = () => {
       <div className="flex-1 p-8">
         <header className="flex justify-between items-center mb-8">
           <div>
-            <h1 className="text-3xl font-bold flex items-center">
+            <h1 className="text-3xl font-bold flex items-center text-black">
               <MessageSquare className="mr-2 text-green-500" /> Reviews
             </h1>
             <p className="text-gray-500">
@@ -150,14 +153,15 @@ const ReviewsPage = () => {
               />
               <Search className="absolute left-3 top-2 text-gray-400" />
             </div>
-            <img
-              src="/api/placeholder/40/40"
-              alt="Admin"
-              className="rounded-full"
+            <Image
+              src={images.image1}
+              style={{ width: "35px", height: "35px" }}
+              alt="Belinda Peter"
+              className="rounded-full mb-2"
             />
             <div>
               <p className="text-sm text-gray-500">Admin</p>
-              <p className="font-bold">Belinda Peter</p>
+              <p className="font-bold text-black">Belinda Peter</p>
             </div>
           </div>
         </header>
@@ -167,7 +171,7 @@ const ReviewsPage = () => {
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-bold">Reviews (30)</h2>
             <div className="flex items-center space-x-4">
-              <button className="flex items-center bg-white border rounded px-4 py-2">
+              <button className="flex items-center bg-blue-900 border rounded px-4 py-2">
                 All <ChevronDown className="ml-2" />
               </button>
               <button className="flex items-center bg-blue-900 text-white rounded px-4 py-2">
@@ -189,7 +193,7 @@ const ReviewsPage = () => {
             </thead>
             <tbody>
               {reviewsData.map((review) => (
-                <tr key={review.id} className="border-b">
+                <tr key={review.id} className="border-b text-black">
                   <td className="py-2">{review.id}</td>
                   <td className="py-2">{review.date}</td>
                   <td className="py-2">{review.name}</td>
