@@ -51,12 +51,13 @@ const COLORS = ["#FF0000", "#00C49F", "#0000FF"];
 const Dashboard = () => {
   const activePathname = usePathname();
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen bg-white">
       {/* Sidebar */}
       <div className="w-64 bg-indigo-400 p-6 flex flex-col">
         <div className="mb-8">
           <Image
             src={images.image1}
+            style={{ width: "100px", height: "100px" }}
             alt="Belinda Peter"
             className="rounded-full mb-2"
           />

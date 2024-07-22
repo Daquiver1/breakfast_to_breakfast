@@ -1,267 +1,191 @@
-import React from "react";
-import {
-  Home,
-  ShoppingBag,
-  PlusSquare,
-  MessageSquare,
-  Bell,
-  User,
-  ChevronDown,
-} from "lucide-react";
+"use client";
 
-const orderData = [
-  {
-    id: "54676867",
-    order: "Pizza,Coke",
-    customer: "WS Wisdom Sonya",
-    date: "Apr 23,08:30am",
-    total: "$50.00",
-    status: "Pending",
-    address: "East-Legon",
-  },
-  {
-    id: "54676868",
-    order: "Cappuccino",
-    customer: "JA Judith Armor",
-    date: "Apr 23,09:30am",
-    total: "$30.00",
-    status: "Completed",
-    address: "Osu",
-  },
-  {
-    id: "54676869",
-    order: "Fruit Platter",
-    customer: "EP Excel Peter",
-    date: "Apr 23,10:30am",
-    total: "$70.00",
-    status: "Pending",
-    address: "North-Legon",
-  },
-  {
-    id: "54676870",
-    order: "Crepes",
-    customer: "MP Mary Phillary",
-    date: "Apr 23,11:30am",
-    total: "$20.00",
-    status: "Pending",
-    address: "Trasacco",
-  },
-  {
-    id: "54676871",
-    order: "Swiss Burger",
-    customer: "BN Beatrice Naa",
-    date: "Apr 23,12:00am",
-    total: "$50.00",
-    status: "Completed",
-    address: "Haatso",
-  },
-  {
-    id: "54676872",
-    order: "Salad",
-    customer: "DO David Offei",
-    date: "Apr 23,12:10am",
-    total: "$100.00",
-    status: "Pending",
-    address: "Adenta",
-  },
-  {
-    id: "54676873",
-    order: "Waffles",
-    customer: "CA Christian Aborlwvd",
-    date: "Apr 23,12:30am",
-    total: "$60.00",
-    status: "Completed",
-    address: "Kasoa",
-  },
-  {
-    id: "54676874",
-    order: "Mocha Latte",
-    customer: "KA Kono Anyemang",
-    date: "Apr 23,01:30am",
-    total: "$40.00",
-    status: "Pending",
-    address: "Atomic",
-  },
-];
+import React, { useState } from "react";
+import {
+  Search,
+  ChevronDown,
+  Bell,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+import { images } from "@/images";
+import Image from "next/image";
 
 const OrdersPage = () => {
+  const [orders] = useState([
+    {
+      id: "0000001",
+      order: "Pizza, Coke",
+      customer: "Wisdom Senya",
+      timestamp: "July 15, 8:30pm",
+      address: "Jubilee Drive Ave, Legon",
+      total: "GH₵ 600.00",
+      status: "Completed",
+    },
+    {
+      id: "0000001",
+      order: "Pizza, Coke",
+      customer: "Wisdom Senya",
+      timestamp: "July 15, 8:30pm",
+      address: "Jubilee Drive Ave, Legon",
+      total: "GH₵ 600.00",
+      status: "Pending",
+    },
+    // ... more orders
+  ]);
+
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
-      <div className="w-64 bg-indigo-400 p-6 flex flex-col">
+      <aside className="w-64 bg-white p-6 flex flex-col">
         <div className="mb-8">
-          <img src="" alt="Belinda Peter" className="rounded-full mb-2" />
-          <h2 className="text-xl font-bold text-black">Belinda Peter</h2>
-          <p className="text-gray-500">(Admin)</p>
+          <Image
+            src={images.image1}
+            style={{ width: "100px", height: "100px" }}
+            alt="Belinda Peter"
+            className="rounded-full mb-2"
+          />
         </div>
-        <nav>
-          <ul className="space-y-4">
-            <li className="flex items-center text-black">
-              <Home className="mr-2 text-red-600" /> Dashboard
+        <nav className="flex-grow">
+          <ul className="space-y-2">
+            <li>
+              <a href="#" className="flex items-center text-gray-600">
+                <span className="mr-2">◻️</span> Overview
+              </a>
             </li>
-            <li className="flex items-center text-black">
-              <ShoppingBag className="mr-2 text-yellow-500" /> Orders
+            <li>
+              <a
+                href="#"
+                className="flex items-center text-blue-600 font-semibold"
+              >
+                <span className="mr-2">📋</span> Orders
+              </a>
             </li>
-            <li className="flex items-center text-black">
-              <PlusSquare className="mr-2 text-blue-600" /> Add to menu
+            <li>
+              <a href="#" className="flex items-center text-gray-600">
+                <span className="mr-2">📄</span> Menu
+              </a>
             </li>
-            <li className="flex items-center text-black">
-              <MessageSquare className="mr-2 text-green-600" /> Reviews
+            <li>
+              <a href="#" className="flex items-center text-gray-600">
+                <span className="mr-2">💬</span> Reviews
+              </a>
             </li>
           </ul>
         </nav>
-      </div>
+        <div>
+          <a href="#" className="flex items-center text-red-600">
+            <span className="mr-2">→</span> Sign Out
+          </a>
+        </div>
+      </aside>
 
       {/* Main content */}
-      <div className="flex-1 p-8">
+      <main className="flex-1 p-8 overflow-auto">
         <header className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold text-black">Orders</h1>
+          <div>
+            <h1 className="text-2xl font-bold mb-2">Orders</h1>
+            <p className="text-gray-600">
+              Get a closer look at all ongoing and past orders
+            </p>
+          </div>
           <div className="flex items-center space-x-4">
-            <button className="bg-purple-100 text-purple-700 px-4 py-2 rounded-lg flex items-center">
-              Accept Order <ChevronDown className="ml-2" />
-            </button>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center">
-              Create Order <ChevronDown className="ml-2" />
-            </button>
-            <Bell />
-            <User />
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search"
+                className="pl-10 pr-4 py-2 rounded-full border"
+              />
+              <Search
+                className="absolute left-3 top-2.5 text-gray-400"
+                size={20}
+              />
+            </div>
+            <Bell className="text-gray-500" />
+            <Image
+              src={images.image1}
+              style={{ width: "50px", height: "50px" }}
+              alt="Belinda Peter"
+              className="rounded-full mb-2"
+            />
           </div>
         </header>
 
-        {/* Order Statistics */}
-        <div className="bg-white p-4 rounded-lg shadow mb-8">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center">
-              <span className="mr-2">📅</span>
-              <span className="font-bold text-black">Today</span>
-            </div>
-            <div className="flex space-x-8">
-              <div>
-                <p className="text-gray-500 text-sm">Total Orders</p>
-                <p className="font-bold text-black">30010</p>
-              </div>
-              <div>
-                <p className="text-gray-500 text-sm">Ordered meals over time</p>
-                <p className="font-bold text-black">1500</p>
-              </div>
-              <div>
-                <p className="text-gray-500 text-sm">
-                  Ordered orders over time
-                </p>
-                <p className="font-bold text-black">30007</p>
-              </div>
-              <div>
-                <p className="text-gray-500 text-sm">Refunds</p>
-                <p className="font-bold text-black">2</p>
-              </div>
+        <div className="bg-white rounded-lg shadow p-6">
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-lg font-semibold">Orders (237)</h2>
+            <div className="flex space-x-2">
+              <button className="px-4 py-2 border rounded-md flex items-center">
+                All Orders <ChevronDown size={16} className="ml-2" />
+              </button>
+              <button className="px-4 py-2 border rounded-md flex items-center">
+                Today <ChevronDown size={16} className="ml-2" />
+              </button>
+              <button className="px-4 py-2 bg-blue-600 text-white rounded-md">
+                + Create an Order
+              </button>
             </div>
           </div>
-        </div>
 
-        {/* Order Tabs */}
-        <div className="mb-4">
-          <ul className="flex border-b">
-            <li className="mr-1">
-              <a
-                className="bg-white inline-block py-2 px-4 text-blue-500 font-semibold"
-                href="#"
-              >
-                All
-              </a>
-            </li>
-            <li className="mr-1">
-              <a
-                className="bg-white inline-block py-2 px-4 text-gray-500 hover:text-blue-500 font-semibold"
-                href="#"
-              >
-                Sent
-              </a>
-            </li>
-            <li className="mr-1">
-              <a
-                className="bg-white inline-block py-2 px-4 text-gray-500 hover:text-blue-500 font-semibold"
-                href="#"
-              >
-                Complete
-              </a>
-            </li>
-            <li className="mr-1">
-              <a
-                className="bg-white inline-block py-2 px-4 text-gray-500 hover:text-blue-500 font-semibold"
-                href="#"
-              >
-                Cancellation
-              </a>
-            </li>
-            <li className="mr-1">
-              <a
-                className="bg-white inline-block py-2 px-4 text-gray-500 hover:text-blue-500 font-semibold"
-                href="#"
-              >
-                Refunds
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Orders Table */}
-        <div className="bg-white rounded-lg shadow overflow-x-auto">
-          <table className="min-w-full">
+          <table className="w-full">
             <thead>
-              <tr className="bg-gray-100">
-                <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
-                  Order
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
-                  Customer
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
-                  Date
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
-                  Total
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
-                  Payment Status
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
-                  Order ID
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
-                  Delivery Address
-                </th>
+              <tr className="text-left text-gray-500 border-b">
+                <th className="pb-2">ORDER ID</th>
+                <th className="pb-2">ORDER</th>
+                <th className="pb-2">CUSTOMER</th>
+                <th className="pb-2">TIMESTAMP</th>
+                <th className="pb-2">DELIVERY ADDRESS</th>
+                <th className="pb-2">TOTAL</th>
+                <th className="pb-2">PAYMENT STATUS</th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
-              {orderData.map((order) => (
-                <tr key={order.id}>
-                  <td className="px-6 py-4 whitespace-nowrap">{order.order}</td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    {order.customer}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">{order.date}</td>
-                  <td className="px-6 py-4 whitespace-nowrap">{order.total}</td>
-                  <td className="px-6 py-4 whitespace-nowrap">
+            <tbody>
+              {orders.map((order, index) => (
+                <tr key={index} className="border-b text-black">
+                  <td className="py-4">{order.id}</td>
+                  <td className="py-4">{order.order}</td>
+                  <td className="py-4">{order.customer}</td>
+                  <td className="py-4">{order.timestamp}</td>
+                  <td className="py-4">{order.address}</td>
+                  <td className="py-4">{order.total}</td>
+                  <td className="py-4">
                     <span
-                      className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
+                      className={`px-2 py-1 rounded ${
                         order.status === "Completed"
-                          ? "bg-green-100 text-green-800"
-                          : "bg-yellow-100 text-yellow-800"
+                          ? "bg-green-100 text-green-600"
+                          : "bg-red-100 text-red-600"
                       }`}
                     >
                       {order.status}
                     </span>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">{order.id}</td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    {order.address}
-                  </td>
                 </tr>
               ))}
             </tbody>
           </table>
+
+          <div className="flex justify-between items-center mt-4">
+            <button className="flex items-center text-blue-600">
+              <ChevronLeft size={16} className="mr-1" /> Previous
+            </button>
+            <div className="flex space-x-2">
+              {[1, 2, 3, "...", 8, 9, 10].map((page, index) => (
+                <button
+                  key={index}
+                  className={`w-8 h-8 flex items-center justify-center rounded-full ${
+                    page === 1 ? "bg-blue-600 text-white" : "text-gray-600"
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+            </div>
+            <button className="flex items-center text-blue-600">
+              Next <ChevronRight size={16} className="ml-1" />
+            </button>
+          </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 };
