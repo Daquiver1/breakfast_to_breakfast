@@ -23,10 +23,28 @@ const OrdersPage = () => {
       status: "Completed",
     },
     {
-      id: "0000001",
+      id: "0000002",
       order: "Pizza, Coke",
-      customer: "Wisdom Senya",
+      customer: "Essel Eghan",
       timestamp: "July 15, 8:30pm",
+      address: "Jubilee Drive Ave, Legon",
+      total: "GH₵ 600.00",
+      status: "Pending",
+    },
+    {
+      id: "0000003",
+      order: "Pizza, Coke",
+      customer: "Abiagail Hayibor",
+      timestamp: "July 15, 8:30pm",
+      address: "Jubilee Drive Ave, Legon",
+      total: "GH₵ 600.00",
+      status: "Pending",
+    },
+    {
+      id: "0000004",
+      order: "Pizza, Coke",
+      customer: "Judith Amor",
+      timestamp: "July 15, 9:30pm",
       address: "Jubilee Drive Ave, Legon",
       total: "GH₵ 600.00",
       status: "Pending",
@@ -104,7 +122,7 @@ const OrdersPage = () => {
         <main className="flex-1 p-8 overflow-auto">
           <header className="flex justify-between items-center mb-8">
             <div>
-              <h1 className="text-2xl font-bold mb-2">Orders</h1>
+              <h1 className="text-2xl font-bold mb-2 text-black">Orders</h1>
               <p className="text-gray-600">
                 Get a closer look at all ongoing and past orders
               </p>
@@ -126,12 +144,12 @@ const OrdersPage = () => {
 
           <div className="bg-white rounded-lg shadow p-6">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-semibold">Orders (237)</h2>
+              <h2 className="text-lg font-semibold text-black">Orders (237)</h2>
               <div className="flex space-x-2">
-                <button className="px-4 py-2 border rounded-md flex items-center">
+                <button className="px-4 py-2 border rounded-md flex items-center text-black">
                   All Orders <ChevronDown size={16} className="ml-2" />
                 </button>
-                <button className="px-4 py-2 border rounded-md flex items-center">
+                <button className="px-4 py-2 border rounded-md flex items-center text-black">
                   Today <ChevronDown size={16} className="ml-2" />
                 </button>
                 <button className="px-4 py-2 bg-blue-600 text-white rounded-md">
