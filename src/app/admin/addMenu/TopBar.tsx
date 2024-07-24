@@ -9,13 +9,7 @@ const TopBar = () => {
     <header className="bg-white shadow-md">
       <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <div className="flex justify-between">
-            <img
-              className="h-8 w-8 rounded-full"
-              src="/admin-avatar.jpg"
-              alt="Admin"
-            />
-          </div>
+          <div className="flex justify-between"></div>
           <div className="flex items-center">
             <button className="p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
               <Bell size={20} />
