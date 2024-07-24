@@ -9,14 +9,14 @@ const MenuTable = () => {
       ingredients:
         "Beef, Onions, Tomatoes, Bread buns, Cheese, Ham, Ketchup, Mayonnaise",
       price: "GH₵ 100.00",
-      image: "/burger.jpg",
+      image: images.image1,
     },
     {
       id: 2,
       name: "Loaded Fries",
       ingredients: "Fries,sausage,cheese,gizzard,egg",
       price: "GH₵ 100.00",
-      image: "/fries.jpg",
+      image: images.images2,
     },
     // Add more meal items
   ];
@@ -82,7 +82,7 @@ const MenuTable = () => {
                 <td className="px-6 py-4 whitespace-nowrap">
                   <Image
                     className="h-10 w-10 rounded-full"
-                    src={images.image1}
+                    src={meal.image}
                     alt={meal.name}
                   />
                 </td>
