@@ -8,7 +8,7 @@ const Sidebar = () => {
       <div className="flex items-center space-x-2 px-4">
         <img src="/logo.png" alt="Logo" className="h-8 w-8" />
       </div>
-      <nav>
+      <nav className="flex-grow">
         <Link
           href="/overview"
           className="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-500 hover:text-white text-black"
@@ -39,9 +39,9 @@ const Sidebar = () => {
           Reviews
         </Link>
       </nav>
-      <div className="absolute bottom-0 w-full">
-        <button className="block w-full py-2.5 px-4 rounded transition duration-200 hover:bg-red-500 hover:text-white text-red-600">
-          <LogOut className="inline-block mr-2" size={20} /> Sign Out
+      <div className="mt-auto">
+        <button className="flex items-center text-red-500">
+          <LogOut className="mr-2" /> Sign Out
         </button>
       </div>
     </div>
