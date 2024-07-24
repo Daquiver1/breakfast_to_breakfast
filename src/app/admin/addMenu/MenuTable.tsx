@@ -18,6 +18,20 @@ const MenuTable = () => {
       price: "GH₵ 100.00",
       image: images.images2,
     },
+    {
+      id: 2,
+      name: "Loaded Fries",
+      ingredients: "Fries,sausage,cheese,gizzard,egg",
+      price: "GH₵ 100.00",
+      image: images.image3,
+    },
+    {
+      id: 2,
+      name: "Loaded Fries",
+      ingredients: "Fries,sausage,cheese,gizzard,egg",
+      price: "GH₵ 100.00",
+      image: images.image4,
+    },
     // Add more meal items
   ];
 

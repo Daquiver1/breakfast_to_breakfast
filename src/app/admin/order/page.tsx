@@ -7,9 +7,13 @@ import {
   Bell,
   ChevronLeft,
   ChevronRight,
+  Grid,
+  PlusSquare,
+  MessageSquare,
 } from "lucide-react";
 import { images } from "@/images";
 import Image from "next/image";
+import { FileText } from "react-feather";
 
 const OrdersPage = () => {
   const [orders] = useState([
@@ -86,28 +90,17 @@ const OrdersPage = () => {
           </div>
           <nav className="flex-grow">
             <ul className="space-y-2">
-              <li>
-                <a href="#" className="flex items-center text-gray-600">
-                  <span className="mr-2">◻️</span> Overview
-                </a>
+              <li className="flex items-center text-black">
+                <Grid className="mr-2 text-red-600" /> Overview
               </li>
-              <li>
-                <a
-                  href="#"
-                  className="flex items-center text-blue-600 font-semibold"
-                >
-                  <span className="mr-2">📋</span> Orders
-                </a>
+              <li className="flex items-center text-black">
+                <FileText className="mr-2 text-yellow-400" /> Orders
               </li>
-              <li>
-                <a href="#" className="flex items-center text-gray-600">
-                  <span className="mr-2">📄</span> Menu
-                </a>
+              <li className="flex items-center text-black">
+                <PlusSquare className="mr-2 text-blue-500" /> Add to Menu
               </li>
-              <li>
-                <a href="#" className="flex items-center text-gray-600">
-                  <span className="mr-2">💬</span> Reviews
-                </a>
+              <li className="flex items-center text-black">
+                <MessageSquare className="mr-2 text-green-600" /> Reviews
               </li>
             </ul>
           </nav>
