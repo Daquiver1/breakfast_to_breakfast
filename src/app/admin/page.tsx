@@ -163,7 +163,7 @@ const Dashboard = () => {
         </div>
 
         {/* Top Selling and Total Orders */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4 text-black font-semibold">
           <div className="bg-white p-6 rounded-lg shadow">
             <h2 className="text-xl font-bold mb-4 text-black">Top Selling</h2>
             <PieChart width={200} height={200}>
