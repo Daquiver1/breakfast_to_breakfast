@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 
 const Hero = () => {
@@ -22,7 +21,7 @@ const Hero = () => {
             View Menu
           </a>
           <Image
-            src="/preview 1.png"
+            src="/preview_1.png"
             alt="hero image2"
             width={300}
             height={300}
