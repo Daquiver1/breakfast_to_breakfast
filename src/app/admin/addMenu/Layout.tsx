@@ -1,8 +1,12 @@
-// components/Layout.js
 import Sidebar from "./Sidebar";
 import TopBar from "./TopBar";
+import { ReactNode } from "react";
 
-const Layout = ({ children }) => {
+interface LayoutProps {
+  children: ReactNode; // Explicitly defining the type of children
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="flex h-screen bg-gray-100">
       <Sidebar />
@@ -15,4 +19,5 @@ const Layout = ({ children }) => {
     </div>
   );
 };
+
 export default Layout;
