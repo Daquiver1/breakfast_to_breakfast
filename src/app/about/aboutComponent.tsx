@@ -46,9 +46,8 @@ const AboutUsComponent: React.FC = () => {
       <Image
         src="/about_us_title.svg"
         alt="About Us"
-        layout="responsive"
-        width={200}
-        height={60}
+        width={265}
+        height={112}
       />
       <div className="relative w-full">
         <Image
@@ -65,7 +64,7 @@ const AboutUsComponent: React.FC = () => {
         <div className="flex-1 text-left">
           About Us
           <h2 className="text-2xl font-bold mb-3">Your Breakfast, Your Way!</h2>
-          <p>
+          <p className="text-[#4b4b4b]">
             In the heart of Osu, a culinary adventure began in 2018 with the
             birth of Breakfast for Breakfast. Founded by a group of passionate
             food enthusiasts, our journey is a testament to the belief that
