@@ -6,7 +6,7 @@ import { BsInstagram } from "react-icons/bs";
 
 export const Footer = () => {
   return (
-    <div className="mt-[9rem] p-4 bg-[#FEFDF5]">
+    <div className="mt-[9rem] p-4 bg-deep-blue">
       <Head>
         <title >Breakfast To Breakfast</title>
         <meta name="description" content="Breakfast To Breakfast restaurant information" />
@@ -52,7 +52,7 @@ export const Footer = () => {
           </section>
         </div>
 
-        <footer className="mt-8 text-center">
+        <footer className="mt-8 text-center bg-custom-blue">
           <div className="flex justify-center space-x-4 mb-4">
             <a href="#"><Image src="/instagram.png" alt="Instagram" width={24} height={24} /></a>
             <a href="#"><Image src="/facebook.png" alt="Facebook" width={24} height={24} /></a>

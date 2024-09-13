@@ -173,19 +173,16 @@ export default function MenuComponent() {
     },
   ];
 
-  // Function to toggle the selected category
   const handleMenuClick = (menuLabel: string) => {
     if (selectedMenu === menuLabel) {
-      setSelectedMenu(null); // Unselect the category and show all
+      setSelectedMenu(null);
     } else {
-      setSelectedMenu(menuLabel); // Select the category
+      setSelectedMenu(menuLabel);
     }
   };
 
-  // Filter categories based on search and selected menu
   const filteredCategories = categories
     .filter((category) => {
-      // If a menu is selected, filter out the other categories
       return selectedMenu === null || category.title === selectedMenu;
     })
     .map((category) => ({
