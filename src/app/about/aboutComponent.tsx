@@ -61,9 +61,9 @@ const AboutUsComponent: React.FC = () => {
 
       {/* Content area below header */}
       <div className="w-full max-w-4xl mt-5 flex">
-        <div className="flex-1 text-left">
+        <div className="flex-1 text-left text-[16px]">
           About Us
-          <h2 className="text-2xl font-bold mb-3">Your Breakfast, Your Way!</h2>
+          <h2 className="text-[48px] font-bold text-deep-blue mb-3">Your Breakfast, Your Way!</h2>
           <p className="text-[#4b4b4b]">
             In the heart of Osu, a culinary adventure began in 2018 with the
             birth of Breakfast for Breakfast. Founded by a group of passionate
